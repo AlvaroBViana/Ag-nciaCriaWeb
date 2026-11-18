@@ -2,54 +2,46 @@
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
+
 body {
     display: grid;
     gap: 5px;
-    background-color: aliceblue;
+    background-color: rgb(241, 245, 245);
 }
 
 div.galeria { 
-    display: flex
-
-    }
-    img {
-        height: 40vh;
-        width: 20%;
-    }
-    #segundaimg {
-        display: none;
-    }
-
-@media (min-width: 768px) {
-    div.galeria { 
     display: flex;
     border: 3px solid rgb(0, 0, 0);
+    height: 40vh;
     }
-    img {
-        height: 40vh;
-        width: 20%;
-    }
-    #segundaimg {
-        display: block;
-        width: 80%;
-    }
+
+#primeiraimg {
+    width: 20%;
 }
 
+#segundaimg {
+    width: 80%;
+}
+
+
+
 ul.menu {
-    display: grid;
-    background-color: aliceblue;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-    border: 3px solid rgb(0, 0, 0);
-    gap: 5px;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(241, 245, 245);
+    border: 3px solid rgb(215, 88, 88);
+    width: 100%;
+    gap: 20px;
     padding: 20px;
     border-radius: 8px;
 
 }
 
+
 div.mainDiv {
     display: grid;
     text-align: justify;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 33% 33% 33%;
     grid-template-rows: auto auto;
     gap:10px;
 }
@@ -65,32 +57,44 @@ section {
 
 #serviços {
     display: grid;
-    
     background-color: rgb(103, 173, 234);
+    
     grid-row: span 2;
 }
 
 ul.services {
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 20px;
+    
     
 }
 
-
-#depoimentos {
-    background-color: rgb(145, 202, 143);
+.services li {
+    border: 5px solid rgb(147, 214, 253);
+    min-height: 100px;
+    background-color: rgb(241, 245, 245);
 }
 
 #home {
-    background-color:rgb(145, 202, 143);
+    background-color:rgb(8, 9, 44);
+    color: rgb(241, 245, 245);
 }
 
 #sobre {
-    background-color: rgb(245, 107, 107);
+    background-color: rgb(40, 41, 110);
+    color: rgb(241, 245, 245);
+}
+
+#depoimentos {
+    background-color:rgb(8, 9, 44);
+    color: rgb(241, 245, 245);
 }
 
 #contato {
-    background-color: rgb(245, 107, 107);
+    background-color: rgb(40, 41, 110);
+    color: rgb(241, 245, 245);
 }
 
 
@@ -103,13 +107,59 @@ form#formulario {
     gap: 5px;
     padding: 20px;
     border-radius: 8px;
-    background-color: rgb(255, 255, 255);
     
-
 }
 
 footer {
     text-align: center;
     gap: 5px;  
     padding: 10px;
+    background-color:rgb(8, 9, 44);
+    color: rgb(241, 245, 245);
+}
+
+@media (max-width: 700px) {
+    body {
+        display: grid;
+        width: 40%;
+        gap: 10px;
+        background-color: rgb(241, 245, 245);
+    }
+
+    header {
+        display: grid;
+        width: 100%;
+        gap: 20px;
+    }
+    
+    
+    div.galeria { 
+        border: 3px solid rgb(0, 0, 0);
+        height: 100%;
+        width: 91vw;
+        border-radius: 8px;
+    }
+   
+    #primeiraimg {
+        width: 100%;
+    }
+   
+    #segundaimg {
+        display: none;
+    }
+
+    ul.menu {
+        display: flex;
+        width: 83vw;
+        border-radius: 8px;
+    }
+    
+    div.mainDiv {
+        display: grid;
+        grid-template-columns: 100%;
+    }
+    
+    
+
+    
 }
